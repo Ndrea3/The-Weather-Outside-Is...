@@ -16,27 +16,32 @@
   <body>
     <div class="container">
       <h1 class="page-title">The Weather Be Like...</h1>
-
-      <div class="weather-app">
-        <h2>Frankford ON, Canada</h2>
-        <ul>
-          <li class="cur-date">Sun May 12,2022 19:31</li>
-          <li class="w-desc">Partly Cloudy</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="partly_cloudy"
-            />
-            28 °C | °F
-          </div>
-          <div class="col-6">
-            <ul class="w-details">
-              <li>Preciptation: 1%</li>
-              <li>Humidity: 21%</li>
-              <li>Wind: 6 km/h</li>
-            </ul>
+      <div class="weather-app-wrap">
+        <div class="weather-app">
+          <h2>Frankford ON, Canada</h2>
+          <ul>
+            <li class="cur-date">Sun May 12,2022 19:31</li>
+            <li class="w-desc">Partly Cloudy</li>
+          </ul>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-img">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="partly_cloudy"
+                  class="float-left"
+                />
+               <strong>28</strong><small> °C | °F</small>
+                </div>
+              </div>
+              <div class="col-6">
+                <ul class="w-details">
+                  <li>Preciptation: 1%</li>
+                  <li>Humidity: 21%</li>
+                  <li>Wind: 6 km/h</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <small>
             <a

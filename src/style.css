@@ -1,3 +1,7 @@
+h2 {
+  color: #3f495e;
+  padding: 15px;
+}
 .page-title {
   margin: 30px;
 }
@@ -7,10 +11,6 @@
   padding: 20px;
   border: 1px solid #efefef;
   border-radius: 15px;
-}
-h2 {
-  color: #3f495e;
-  padding: 15px;
 }
 .cur-date {
   list-style: none;
@@ -30,4 +30,26 @@ h2 {
   font-size: 20px;
   font-weight: 200;
   line-height: 25px;
+  margin-top: 20px;
+}
+.weather-app-wrap {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
+.weather-img img {
+  margin-right: 30px;
+  height: 95px;
+  width: 95px;
+  position: relative;
+  bottom: 25px;
+}
+.weather-img strong {
+  font-size: 70px;
+  font-weight: 350;
+}
+.weather-img small {
+  font-size: 20px;
+  position: relative;
+  top: -32px;
 }
