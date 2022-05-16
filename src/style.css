@@ -57,3 +57,10 @@ li {
   position: relative;
   top: -32px;
 }
+.temp-summary {
+  list-style: none;
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 25px;
+}

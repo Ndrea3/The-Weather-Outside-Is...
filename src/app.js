@@ -1,21 +1,63 @@
+function formatDate(date) {
+  let weekDays = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+  let weekDay = weekDays[now.getDay()];
+
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let month = months[date.getMonth()];
+  let year = date.getFullYear();
+  let day = date.getDate();
+  return `${weekDay}, ${month} ${day}, ${year}  ${hours}:${minutes}`;
+}
+let now = new Date();
+let dateElement = document.querySelector("#date");
+dateElement.innerHTML = formatDate(now);
+
 function showTemp(response) {
   console.log(response);
-  let temperatureElement = document.querySelector("#temperature");
+  let temperature = Math.round(response.data.main.temp);
+  let currentTemp = document.querySelector("#temperature");
+  currentTemp.innerHTML = `${temperature}`;
   let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = response.data.name;
   let descriptionElement = document.querySelector("#desc");
-  let humidityElement = document.querySelector("#humidity");
-  let pressureElement = document.querySelector("#pressure");
-  let windElement = document.querySelector("#wind");
-  temperatureElement.innerhtml = Math.round(response.data.main.temp);
-  cityElement.innerHTML = response.data.main.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
+  let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
+  let pressureElement = document.querySelector("#pressure");
   pressureElement.innerHTML = response.data.main.pressure;
+  let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  //let dailyHigh = Math.round(response.data.main.temp_max);
+  let tempHighElement = document.querySelector("#dailyHigh");
+  tempHighElement.innerHTML = response.data.main.temp_max;
+  let tempLowElement = document.querySelector("#dailyLow");
+  tempLowElement.innerHTML = response.data.main.temp_min;
+  let dailyFeelsLikeElement = document.querySelector("#dailyFeelsLike");
+  dailyFeelsLike.innerHTML = response.data.main.feels_like;
 }
 
 let apiKey = "f98ba7e599adf93cd93e20273e395b25";
 let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=Frankford&appid=${apiKey}&units=metric`;
-console.log(apiURL);
 
 axios.get(apiURL).then(showTemp);
