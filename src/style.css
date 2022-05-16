@@ -1,6 +1,10 @@
 h2 {
+  font-size: 50px;
   color: #3f495e;
   padding: 15px;
+}
+li {
+  text-transform: capitalize;
 }
 .page-title {
   margin: 30px;
