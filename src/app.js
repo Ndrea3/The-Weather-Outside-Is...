@@ -48,16 +48,16 @@ function showTemp(response) {
   pressureElement.innerHTML = response.data.main.pressure;
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  //let dailyHigh = Math.round(response.data.main.temp_max);
-  let tempHighElement = document.querySelector("#dailyHigh");
-  tempHighElement.innerHTML = response.data.main.temp_max;
+  let tempMaxElement = document.querySelector("#dailyHigh");
+  tempMaxElement.innerHTML = Math.round(response.data.main.temp_max);
   let tempLowElement = document.querySelector("#dailyLow");
-  tempLowElement.innerHTML = response.data.main.temp_min;
+  tempLowElement.innerHTML = Math.round(response.data.main.temp_min);
   let dailyFeelsLikeElement = document.querySelector("#dailyFeelsLike");
-  dailyFeelsLike.innerHTML = response.data.main.feels_like;
+  dailyFeelsLike.innerHTML = Math.round(response.data.main.feels_like);
 }
 
 let apiKey = "f98ba7e599adf93cd93e20273e395b25";
-let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=Frankford&appid=${apiKey}&units=metric`;
+let city = "Quinte West";
+let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiURL).then(showTemp);

@@ -3,7 +3,7 @@ h2 {
   color: #3f495e;
   padding: 15px;
 }
-li {
+li.first-letter {
   text-transform: capitalize;
 }
 .page-title {
@@ -28,6 +28,7 @@ li {
   font-size: 20px;
   font-weight: 200;
   line-height: 25px;
+  text-transform: capitalize;
 }
 .w-details {
   list-style: none;
