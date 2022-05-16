@@ -61,7 +61,13 @@ li.first-letter {
 .temp-summary {
   list-style: none;
   display: inline-flex;
-  font-size: 15px;
-  font-weight: 200;
+  font-size: 17px;
+  font-weight: 150;
   line-height: 25px;
+  text-decoration: none;
+}
+.active {
+  color: #202124;
+  cursor: default;
+  text-decoration: none;
 }

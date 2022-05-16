@@ -63,6 +63,7 @@ function showTemp(response) {
     "alt",
     `http://openweathermap.org/img/wn/${response.data.weather[0].description}.png`
   );
+  celciusTemp = response.data.main.temp;
 }
 function search(city) {
   let apiKey = "f98ba7e599adf93cd93e20273e395b25";
@@ -76,8 +77,35 @@ function handleSubmit(event) {
   search(cityInputElement.value);
   console.log(cityInputElement.value);
 }
-
+//global variable 1
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+function showFahrTemp(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#temperature");
+  celcLink.classList.remove("active");
+  fahrLink.classList.add("active");
+  let fahrTemp = Math.round((celciusTemp * 9) / 5 + 32);
+  currentTemp.innerHTML = fahrTemp;
+}
+function showCelcTemp(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#temperature");
+  celcLink.classList.add("active");
+  fahrLink.classList.remove("active");
+  currentTemp.innerHTML = Math.round(celciusTemp);
+}
+
+//global variable 3
+let celciusTemp = null;
+
+//global variable 2
+let fahrLink = document.querySelector("#fahr-link");
+fahrLink.addEventListener("click", showFahrTemp);
+
+//global variable 4
+let celcLink = document.querySelector("#celc-link");
+celcLink.addEventListener("click", showCelcTemp);
 
 search("Quinte West");
