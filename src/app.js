@@ -53,7 +53,7 @@ function showTemp(response) {
   let tempLowElement = document.querySelector("#dailyLow");
   tempLowElement.innerHTML = Math.round(response.data.main.temp_min);
   let dailyFeelsLikeElement = document.querySelector("#dailyFeelsLike");
-  dailyFeelsLike.innerHTML = Math.round(response.data.main.feels_like);
+  dailyFeelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -64,6 +64,9 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].description}.png`
   );
   celciusTemp = response.data.main.temp;
+  feelLikeTemp = response.data.main.feels_like;
+  dailyMaxTemp = response.data.main.temp_max;
+  dailyMinTemp = response.data.main.temp_min;
 }
 function search(city) {
   let apiKey = "f98ba7e599adf93cd93e20273e395b25";
@@ -96,6 +99,13 @@ function showCelcTemp(event) {
   fahrLink.classList.remove("active");
   currentTemp.innerHTML = Math.round(celciusTemp);
 }
+
+//global variable 5
+let feelLikeTemp = null;
+//global variable 6
+let dailyMaxTemp = null;
+//global variable 7
+let dailyMinTemp = null;
 
 //global variable 3
 let celciusTemp = null;
