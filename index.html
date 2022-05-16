@@ -19,7 +19,17 @@
       <h1 class="page-title">The Weather Be Like...</h1>
       <div class="weather-app-wrap">
         <div class="weather-app">
-          <h2 class="place" id="city"></h2>
+          <form id="search-form">
+            <div class="row">
+              <div class="col-9">
+            <input type="search" placeholder="Enter a City..." class ="form-control" id="city-input" autocomplete="off"/>
+            </div>
+            <div class="col-3">
+            <input type="submit" value="Search" class="btn btn-secondary w-100"/>
+            </div>
+            </div>
+          </form>
+          <h2 class="place mt-3" id="city"></h2>
           <ul>
             <li class="cur-date" id="date"></li>
             <li class="w-desc" id="desc"></li>

@@ -64,9 +64,20 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].description}.png`
   );
 }
+function search(city) {
+  let apiKey = "f98ba7e599adf93cd93e20273e395b25";
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiURL).then(showTemp);
+}
 
-let apiKey = "f98ba7e599adf93cd93e20273e395b25";
-let city = "Quinte West";
-let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+  console.log(cityInputElement.value);
+}
 
-axios.get(apiURL).then(showTemp);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("Quinte West");
