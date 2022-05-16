@@ -54,6 +54,15 @@ function showTemp(response) {
   tempLowElement.innerHTML = Math.round(response.data.main.temp_min);
   let dailyFeelsLikeElement = document.querySelector("#dailyFeelsLike");
   dailyFeelsLike.innerHTML = Math.round(response.data.main.feels_like);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
+  );
+  iconElement.setAttribute(
+    "alt",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].description}.png`
+  );
 }
 
 let apiKey = "f98ba7e599adf93cd93e20273e395b25";
