@@ -34,7 +34,6 @@ let dateElement = document.querySelector("#date");
 dateElement.innerHTML = formatDate(now);
 
 function showTemp(response) {
-  console.log(response);
   let temperature = Math.round(response.data.main.temp);
   let currentTemp = document.querySelector("#temperature");
   currentTemp.innerHTML = `${temperature}`;
@@ -49,7 +48,7 @@ function showTemp(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
   let tempMaxElement = document.querySelector("#dailyHigh");
-  tempMaxElement.innerHTML = Math.round(dailyMaxTemp);
+  tempMaxElement.innerHTML = Math.round(response.data.main.temp_max);
   let tempLowElement = document.querySelector("#dailyLow");
   tempLowElement.innerHTML = Math.round(response.data.main.temp_min);
   let dailyFeelsLikeElement = document.querySelector("#dailyFeelsLike");
@@ -78,7 +77,6 @@ function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
-  console.log(cityInputElement.value);
 }
 //global variable 1
 let form = document.querySelector("#search-form");
