@@ -49,7 +49,7 @@ function showTemp(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
   let tempMaxElement = document.querySelector("#dailyHigh");
-  tempMaxElement.innerHTML = Math.round(response.data.main.temp_max);
+  tempMaxElement.innerHTML = Math.round(dailyMaxTemp);
   let tempLowElement = document.querySelector("#dailyLow");
   tempLowElement.innerHTML = Math.round(response.data.main.temp_min);
   let dailyFeelsLikeElement = document.querySelector("#dailyFeelsLike");
@@ -64,9 +64,9 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].description}.png`
   );
   celciusTemp = response.data.main.temp;
-  feelLikeTemp = response.data.main.feels_like;
   dailyMaxTemp = response.data.main.temp_max;
   dailyMinTemp = response.data.main.temp_min;
+  feelsLikeTemp = response.data.main.feels_like;
 }
 function search(city) {
   let apiKey = "f98ba7e599adf93cd93e20273e395b25";
@@ -91,24 +91,32 @@ function showFahrTemp(event) {
   fahrLink.classList.add("active");
   let fahrTemp = Math.round((celciusTemp * 9) / 5 + 32);
   currentTemp.innerHTML = fahrTemp;
+  dailyHigh.innerHTML = Math.round((dailyMaxTemp * 9) / 5 + 32);
+  dailyLow.innerHTML = Math.round((dailyMinTemp * 9) / 5 + 32);
+  dailyFeelsLike.innerHTML = Math.round((feelsLikeTemp * 9) / 5 + 32);
 }
 function showCelcTemp(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#temperature");
+  let dailyHigh = document.querySelector("#dailyHigh");
+  let dailyLow = document.querySelector("#dailyLow");
+  let dailyFeelsLike = document.querySelector("#dailyFeelsLike");
   celcLink.classList.add("active");
   fahrLink.classList.remove("active");
   currentTemp.innerHTML = Math.round(celciusTemp);
+  dailyHigh.innerHTML = Math.round(dailyMaxTemp);
+  dailyLow.innerHTML = Math.round(dailyMinTemp);
+  dailyFeelsLike.innerHTML = Math.round(feelsLikeTemp);
 }
-
-//global variable 5
-let feelLikeTemp = null;
-//global variable 6
-let dailyMaxTemp = null;
-//global variable 7
-let dailyMinTemp = null;
 
 //global variable 3
 let celciusTemp = null;
+//global variable 5
+let dailyMaxTemp = null;
+//global variable 6
+let dailyMinTemp = null;
+//global variable 7
+let feelsLikeTemp = null;
 
 //global variable 2
 let fahrLink = document.querySelector("#fahr-link");
