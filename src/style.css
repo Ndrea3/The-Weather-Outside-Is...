@@ -13,7 +13,7 @@ li.first-letter {
   max-width: 800px;
   margin: 30px auto;
   padding: 20px;
-  border: 1px solid #efefef;
+  border: 1px solid #c4bcbc;
   border-radius: 15px;
 }
 .cur-date {
@@ -70,4 +70,18 @@ li.first-letter {
   color: #202124;
   cursor: default;
   text-decoration: none;
+}
+.daily-weather {
+  text-align: center;
+  padding: 15px;
+  margin: auto 15px;
+  line-height: 30px;
+}
+.daily-forecast-day {
+  font-size: 16px;
+  color: #5e5959;
+}
+.daily-forecast-temp {
+  font-size: 11px;
+  color: #6680b9;
 }
