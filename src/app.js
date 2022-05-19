@@ -128,30 +128,32 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-function showFahrTemp(event) {
-  event.preventDefault();
-  let currentTemp = document.querySelector("#temperature");
-  celcLink.classList.remove("active");
-  fahrLink.classList.add("active");
-  let fahrTemp = Math.round((celciusTemp * 9) / 5 + 32);
-  currentTemp.innerHTML = fahrTemp;
-  dailyHigh.innerHTML = Math.round((dailyMaxTemp * 9) / 5 + 32);
-  dailyLow.innerHTML = Math.round((dailyMinTemp * 9) / 5 + 32);
-  dailyFeelsLike.innerHTML = Math.round((feelsLikeTemp * 9) / 5 + 32);
-}
-function showCelcTemp(event) {
-  event.preventDefault();
-  let currentTemp = document.querySelector("#temperature");
-  let dailyHigh = document.querySelector("#dailyHigh");
-  let dailyLow = document.querySelector("#dailyLow");
-  let dailyFeelsLike = document.querySelector("#dailyFeelsLike");
-  celcLink.classList.add("active");
-  fahrLink.classList.remove("active");
-  currentTemp.innerHTML = Math.round(celciusTemp);
-  dailyHigh.innerHTML = Math.round(dailyMaxTemp);
-  dailyLow.innerHTML = Math.round(dailyMinTemp);
-  dailyFeelsLike.innerHTML = Math.round(feelsLikeTemp);
-}
+
+//Applying a function to toggle units of measure for temperature if hylerlinked in HTML//
+//function showFahrTemp(event) {
+  //event.preventDefault();
+  //let currentTemp = document.querySelector("#temperature");
+  //celcLink.classList.remove("active");
+  //fahrLink.classList.add("active");
+  //let fahrTemp = Math.round((celciusTemp * 9) / 5 + 32);
+  //currentTemp.innerHTML = fahrTemp;
+  //dailyHigh.innerHTML = Math.round((dailyMaxTemp * 9) / 5 + 32);
+  //dailyLow.innerHTML = Math.round((dailyMinTemp * 9) / 5 + 32);
+  //dailyFeelsLike.innerHTML = Math.round((feelsLikeTemp * 9) / 5 + 32);
+//}
+//function showCelcTemp(event) {
+  //event.preventDefault();
+  //let currentTemp = document.querySelector("#temperature");
+  //let dailyHigh = document.querySelector("#dailyHigh");
+  //let dailyLow = document.querySelector("#dailyLow");
+  //let dailyFeelsLike = document.querySelector("#dailyFeelsLike");
+  //celcLink.classList.add("active");
+  //fahrLink.classList.remove("active");
+  //currentTemp.innerHTML = Math.round(celciusTemp);
+  //dailyHigh.innerHTML = Math.round(dailyMaxTemp);
+  //dailyLow.innerHTML = Math.round(dailyMinTemp);
+  //dailyFeelsLike.innerHTML = Math.round(feelsLikeTemp);
+//}
 
 //global variable 3
 let celciusTemp = null;
@@ -163,11 +165,11 @@ let dailyMinTemp = null;
 let feelsLikeTemp = null;
 
 //global variable 2
-let fahrLink = document.querySelector("#fahr-link");
-fahrLink.addEventListener("click", showFahrTemp);
+//let fahrLink = document.querySelector("#fahr-link");
+//fahrLink.addEventListener("click", showFahrTemp);
 
 //global variable 4
-let celcLink = document.querySelector("#celc-link");
-celcLink.addEventListener("click", showCelcTemp);
+//let celcLink = document.querySelector("#celc-link");
+//celcLink.addEventListener("click", showCelcTemp);
 
 search("Quinte West");
