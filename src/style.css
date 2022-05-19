@@ -10,7 +10,7 @@ li.first-letter {
   margin: 30px;
 }
 .weather-app {
-  max-width: 800px;
+  max-width: 850px;
   margin: 30px auto;
   padding: 20px;
   border: 1px solid #c4bcbc;
@@ -76,7 +76,7 @@ li.first-letter {
   border-radius: 15px;
   padding: 10px;
   margin: auto 10px;
-  max-width: 750px;
+  max-width: 800px;
 }
 .daily-weather {
   text-align: center;
