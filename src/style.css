@@ -7,16 +7,22 @@ li.first-letter {
   text-transform: capitalize;
 }
 .page-title {
-  padding: 5px;
-  margin: 15px;
+  padding: 15px;
+  margin: 10px;
   max-width: 850px;
 }
 .weather-app {
   max-width: 850px;
   margin: 15px auto;
   padding: 20px;
-  border: 1px solid #c4bcbc;
+}
+.curWeather {
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 20px;
+  border: 1px solid #544e4e;
   border-radius: 15px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .cur-date {
   list-style: none;
@@ -40,7 +46,7 @@ li.first-letter {
   margin-top: 20px;
 }
 .weather-app-wrap {
-  max-width: 800px;
+  max-width: 850px;
   margin: 30px auto;
   padding: 20px;
 }
@@ -69,19 +75,20 @@ li.first-letter {
   text-decoration: none;
 }
 .daily-forecast {
-  border: 1px solid #5c78b6;
-  border-radius: 15px;
-  padding: 10px;
-  margin: auto 35px;
-  max-width: 800px;
+  padding: 20px;
+  margin: auto 25px;
+  max-width: 850px;
   align-content: center;
 }
 .daily-weather {
   text-align: center;
-  padding: 15px;
-  margin: auto 5px;
-  line-height: 20px;
+  padding: 25px;
+  margin: auto 10px;
+  line-height: 30px;
   color: #0c0c0c;
+  border: 1px solid #544e4e;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .daily-forecast-day {
   font-size: 17px;
@@ -94,6 +101,14 @@ li.first-letter {
   color: #a19c9c;
 }
 .forecast-name {
-  margin-left: 15px;
-  padding: 15px;
+  margin-left: 5px;
+  padding: 25px;
+}
+.forecast {
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 20px;
+  border: 1px solid #544e4e;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }

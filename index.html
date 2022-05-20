@@ -16,8 +16,9 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="page-title">The Weather Be Like...</h1>
+      
       <div class="weather-app-wrap">
+        <h1 class="page-title">The Weather Be Like...</h1>
         <div class="weather-app">
           <form id="search-form">
             <div class="row">
@@ -29,6 +30,7 @@
             </div>
             </div>
           </form>
+          <div class="curWeather">
           <h2 class="place mt-3" id="city"></h2>
           <ul>
             <li class="cur-date" id="date"></li>
@@ -59,8 +61,9 @@
                 <li class="temp-summary p-3"><strong>Feels Like:</strong><span id="dailyFeelsLike"></span></li>
               </ul>
             </div>
+            </div>
       <div class="forecast">
-      <h5 class="forecast-name">Weekly Expectations...</h5>
+      <h4 class="forecast-name">What's up Next: Daily Forecast</h4>
       <div class="daily-forecast" id="forecast">
       <div class="row">
         <div class="daily-weather col-2">
@@ -85,6 +88,7 @@
             by Andrea Simmons
           </small>
         </div>
+    </div>
     </div>
     </div>
     <script src="src/app.js"></script>
