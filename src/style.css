@@ -7,11 +7,13 @@ li.first-letter {
   text-transform: capitalize;
 }
 .page-title {
-  margin: 30px;
+  padding: 5px;
+  margin: 15px;
+  max-width: 850px;
 }
 .weather-app {
   max-width: 850px;
-  margin: 30px auto;
+  margin: 15px auto;
   padding: 20px;
   border: 1px solid #c4bcbc;
   border-radius: 15px;
@@ -70,8 +72,9 @@ li.first-letter {
   border: 1px solid #5c78b6;
   border-radius: 15px;
   padding: 10px;
-  margin: auto 10px;
+  margin: auto 35px;
   max-width: 800px;
+  align-content: center;
 }
 .daily-weather {
   text-align: center;
@@ -91,5 +94,6 @@ li.first-letter {
   color: #a19c9c;
 }
 .forecast-name {
-  margin-left: 20px;
+  margin-left: 15px;
+  padding: 15px;
 }

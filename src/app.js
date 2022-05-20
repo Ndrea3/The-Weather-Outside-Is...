@@ -17,6 +17,8 @@ function formatDate(date) {
     "December",
   ];
   let hours = date.getHours();
+  let AmOrPm = hours >= 12 ? "pm" : "am";
+  hours = hours % 12 || 12;
   if (hours < 10) {
     hours = `0${hours}`;
   }
@@ -27,7 +29,7 @@ function formatDate(date) {
   let month = months[date.getMonth()];
   let year = date.getFullYear();
   let day = date.getDate();
-  return `${weekDay}, ${month} ${day}, ${year}  ${hours}:${minutes}`;
+  return `${weekDay}, ${month} ${day}, ${year}  ${hours}:${minutes} ${AmOrPm}`;
 }
 
 function formatDay(timestamp) {
@@ -128,31 +130,30 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-
 //Applying a function to toggle units of measure for temperature if hylerlinked in HTML//
 //function showFahrTemp(event) {
-  //event.preventDefault();
-  //let currentTemp = document.querySelector("#temperature");
-  //celcLink.classList.remove("active");
-  //fahrLink.classList.add("active");
-  //let fahrTemp = Math.round((celciusTemp * 9) / 5 + 32);
-  //currentTemp.innerHTML = fahrTemp;
-  //dailyHigh.innerHTML = Math.round((dailyMaxTemp * 9) / 5 + 32);
-  //dailyLow.innerHTML = Math.round((dailyMinTemp * 9) / 5 + 32);
-  //dailyFeelsLike.innerHTML = Math.round((feelsLikeTemp * 9) / 5 + 32);
+//event.preventDefault();
+//let currentTemp = document.querySelector("#temperature");
+//celcLink.classList.remove("active");
+//fahrLink.classList.add("active");
+//let fahrTemp = Math.round((celciusTemp * 9) / 5 + 32);
+//currentTemp.innerHTML = fahrTemp;
+//dailyHigh.innerHTML = Math.round((dailyMaxTemp * 9) / 5 + 32);
+//dailyLow.innerHTML = Math.round((dailyMinTemp * 9) / 5 + 32);
+//dailyFeelsLike.innerHTML = Math.round((feelsLikeTemp * 9) / 5 + 32);
 //}
 //function showCelcTemp(event) {
-  //event.preventDefault();
-  //let currentTemp = document.querySelector("#temperature");
-  //let dailyHigh = document.querySelector("#dailyHigh");
-  //let dailyLow = document.querySelector("#dailyLow");
-  //let dailyFeelsLike = document.querySelector("#dailyFeelsLike");
-  //celcLink.classList.add("active");
-  //fahrLink.classList.remove("active");
-  //currentTemp.innerHTML = Math.round(celciusTemp);
-  //dailyHigh.innerHTML = Math.round(dailyMaxTemp);
-  //dailyLow.innerHTML = Math.round(dailyMinTemp);
-  //dailyFeelsLike.innerHTML = Math.round(feelsLikeTemp);
+//event.preventDefault();
+//let currentTemp = document.querySelector("#temperature");
+//let dailyHigh = document.querySelector("#dailyHigh");
+//let dailyLow = document.querySelector("#dailyLow");
+//let dailyFeelsLike = document.querySelector("#dailyFeelsLike");
+//celcLink.classList.add("active");
+//fahrLink.classList.remove("active");
+//currentTemp.innerHTML = Math.round(celciusTemp);
+//dailyHigh.innerHTML = Math.round(dailyMaxTemp);
+//dailyLow.innerHTML = Math.round(dailyMinTemp);
+//dailyFeelsLike.innerHTML = Math.round(feelsLikeTemp);
 //}
 
 //global variable 3
