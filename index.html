@@ -14,11 +14,11 @@
     />
     <title>My Weather App</title>
   </head>
-  <body>
+  <body background="src/images/coffee-and-donuts-pop-color-background.svg" >
     <div class="container">
       
       <div class="weather-app-wrap">
-        <h1 class="page-title">The Weather Be Like...</h1>
+        <h1 class="page-title">The Weather Be Like...🤔</h1>
         <div class="weather-app">
           <form id="search-form">
             <div class="row">
@@ -26,7 +26,7 @@
             <input type="search" placeholder="Enter a City..." class ="form-control" id="city-input" autocomplete="off"/>
             </div>
             <div class="col-3">
-            <input type="submit" value="Search" class="btn btn-secondary w-100"/>
+            <input type="submit" value="Search" class="btn btn-info w-100"/>
             </div>
             </div>
           </form>
@@ -50,20 +50,20 @@
               </div>
               <div class="col-6">
                 <ul class="w-details">
-                  <li>Pressure:<span id="pressure"></span> mmHg</li>
-                  <li>Humidity:<span id="humidity"></span>%</li>
-                  <li>Wind:<span id="wind"></span> km/h</li>
+                  <li><strong>Pressure: </strong><span id="pressure"></span> mmHg</li>
+                  <li><strong>Humidity: </strong><span id="humidity"></span>%</li>
+                  <li><strong>Wind: </strong><span id="wind"></span> km/h</li>
                 </ul>
               </div>
               <ul>
-                <li class="temp-summary p-3"><strong>High:</strong><span id="dailyHigh"></span></li>
-                <li class="temp-summary p-3"><strong>Low:</strong><span id="dailyLow"></span></li>
-                <li class="temp-summary p-3"><strong>Feels Like:</strong><span id="dailyFeelsLike"></span></li>
+                <li class="temp-summary p-3"><strong>High: </strong><span id="dailyHigh"> </span></li>
+                <li class="temp-summary p-3"><strong>Low: </strong><span id="dailyLow"> </span></li>
+                <li class="temp-summary p-3"><strong>Feels Like: </strong><span id="dailyFeelsLike"> </span></li>
               </ul>
             </div>
             </div>
       <div class="forecast">
-      <h4 class="forecast-name">What's up Next: Daily Forecast</h4>
+      <h4 class="forecast-name">What's Up Next? ...<small id="subTitle">(Daily Forecast)</small></h4>
       <div class="daily-forecast" id="forecast">
       <div class="row">
         <div class="daily-weather col-2">
@@ -79,14 +79,16 @@
           </div>
         </div>
           </div>
-          <small>
+          <div class="footer">
+          <small ><strong>
             <a
               href="https://github.com/Ndrea3/The-Weather-Outside-Is....git"
               target="_blank"
               >Open-sourced code</a
             >
-            by Andrea Simmons
+            <span class="author">by Andrea Simmons</span></strong>
           </small>
+          </div>
         </div>
     </div>
     </div>
